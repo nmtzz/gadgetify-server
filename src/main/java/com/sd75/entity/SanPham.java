@@ -1,10 +1,9 @@
 package com.sd75.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.Nationalized;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.math.BigDecimal;
 
@@ -15,7 +14,6 @@ import java.math.BigDecimal;
 @Setter
 @Entity
 @Table(name = "san_pham")
-@JsonIgnoreProperties({ "danhMuc" })
 public class SanPham {
     @Id
     @Column(name = "id", nullable = false)
@@ -24,6 +22,7 @@ public class SanPham {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_danh_muc")
+    @JsonIgnore
     private DanhMuc danhMuc;
 
     @Nationalized
