@@ -1,5 +1,6 @@
 package com.sd75.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.Nationalized;
@@ -21,7 +22,8 @@ public class ChiTietSanPham {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_san_pham")
-    private SanPham idSanPham;
+    @JsonIgnore
+    private SanPham sanPham;
 
     @Nationalized
     @Column(name = "sku", length = 50)
