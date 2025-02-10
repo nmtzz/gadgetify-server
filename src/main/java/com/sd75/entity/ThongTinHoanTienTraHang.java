@@ -19,7 +19,7 @@ public class ThongTinHoanTienTraHang {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_tra_hang")
-    private TraHang idTraHang;
+    private TraHang traHang;
 
     @Nationalized
     @Column(name = "ngan_hang_tra")

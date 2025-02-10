@@ -18,10 +18,10 @@ public class ChiTietDotKhuyenMai {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_dot_khuyen_mai")
-    private DotKhuyenMai idDotKhuyenMai;
+    private DotKhuyenMai dotKhuyenMai;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_san_pham")
-    private SanPham idSanPham;
+    private SanPham sanPham;
 
 }

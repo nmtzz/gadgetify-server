@@ -21,11 +21,11 @@ public class DanhGia {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_nguoi_dung")
-    private NguoiDung idNguoiDung;
+    private NguoiDung nguoiDung;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_san_pham")
-    private SanPham idSanPham;
+    private SanPham sanPham;
 
     @Column(name = "diem", columnDefinition = "tinyint")
     private Short diem;

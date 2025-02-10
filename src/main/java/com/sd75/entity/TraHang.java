@@ -22,7 +22,7 @@ public class TraHang {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_chi_tiet_don_hang")
-    private ChiTietDonHang idChiTietDonHang;
+    private ChiTietDonHang chiTietDonHang;
 
     @Column(name = "so_luong_tra")
     private Integer soLuongTra;

@@ -19,7 +19,7 @@ public class HinhAnhTraHang {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_doi_tra")
-    private TraHang idDoiTra;
+    private TraHang doiTra;
 
     @Nationalized
     @Column(name = "url")

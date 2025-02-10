@@ -1,5 +1,6 @@
 package com.sd75.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.Nationalized;
@@ -40,9 +41,11 @@ public class PhieuGiamGia {
     private BigDecimal giaTriToiDaGiamGia;
 
     @Column(name = "ngay_bat_dau")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm", timezone = "UTC")
     private Instant ngayBatDau;
 
     @Column(name = "ngay_ket_thuc")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm", timezone = "UTC")
     private Instant ngayKetThuc;
 
 }

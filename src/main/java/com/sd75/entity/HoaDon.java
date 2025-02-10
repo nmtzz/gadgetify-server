@@ -21,7 +21,7 @@ public class HoaDon {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_don_hang")
-    private DonHang idDonHang;
+    private DonHang donHang;
 
     @Nationalized
     @Column(name = "ma_hoa_don", length = 50)

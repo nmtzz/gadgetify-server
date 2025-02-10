@@ -22,11 +22,11 @@ public class DonHang {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_nguoi_dung")
-    private NguoiDung idNguoiDung;
+    private NguoiDung nguoiDung;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_phieu_giam_gia")
-    private PhieuGiamGia idPhieuGiamGia;
+    private PhieuGiamGia phieuGiamGia;
 
     @Nationalized
     @Column(name = "ma_don_hang", length = 50)

@@ -1,5 +1,6 @@
 package com.sd75.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -18,11 +19,12 @@ public class GioHang {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_nguoi_dung")
-    private NguoiDung idNguoiDung;
+    @JsonIgnore
+    private NguoiDung nguoiDung;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_chi_tiet_san_pham")
-    private ChiTietSanPham idChiTietSanPham;
+    private ChiTietSanPham chiTietSanPham;
 
     @Column(name = "so_luong")
     private Integer soLuong;
