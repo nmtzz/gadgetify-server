@@ -25,4 +25,8 @@ public class DanhMuc {
     @Column(name = "icon")
     private String icon;
 
+    @Nationalized
+    @Column(name = "public_id", length = 50)
+    private String publicId;
+
 }
